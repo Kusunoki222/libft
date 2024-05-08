@@ -6,7 +6,18 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 20:09:22 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/07 20:58:24 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/08 17:39:21 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef	LIBFT_H
+#define	LIBFT_H
+
+#include <stdio.h>
+#include <unistd.h>
+
+
+
+
+
+#endif
