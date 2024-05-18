@@ -6,11 +6,22 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:16:28 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/13 11:39:48 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/18 17:58:46 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+
+
+
+
+
+
+
+
+
+
+
 
 int is_digit(char ch) {
     return ch >= '0' && ch <= '9';
