@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:01:30 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/14 15:16:02 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/18 14:26:02 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 	while (n-- > 0)
 	{
-		*d++ = *s++;
+		*(d++) = *(s++);
 	}
 	return (dest);
 }
