@@ -6,11 +6,11 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:29:55 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/16 16:32:32 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:05:31 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int src)
+int	ft_tolower(int src)
 {
 	if (src >= 'A' && src <= 'Z')
 	{

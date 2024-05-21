@@ -6,13 +6,13 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:37:02 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/08 19:11:26 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:26:20 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	length;
 

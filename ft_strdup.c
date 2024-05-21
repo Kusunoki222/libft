@@ -6,25 +6,24 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:44:36 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/18 14:45:32 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:32:16 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	length;
+// int	ft_strlen(char *str)
+// {
+// 	int	length;
 
-	length = 0;
-	while (*str != '\0')
-	{
-		str++;
-		length++;
-	}
-	return (length);
-}
-
+// 	length = 0;
+// 	while (*str != '\0')
+// 	{
+// 		str++;
+// 		length++;
+// 	}
+// 	return (length);
+// }
 char	*ft_strcpy(char	*dest, char	*src)
 {
 	int	i;

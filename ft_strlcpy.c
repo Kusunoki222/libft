@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:39:19 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/18 17:52:14 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:25:15 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 		*dst = '\0';
 	}
-
 	return (src_len);
 }
 
-
 // #include <stdio.h>
 // #include <string.h>
-
 // int main()
 // {
 // 	char	src[] = "Hello, world!";
 // 	char	dst[20];
-
 // 	size_t copied_chars = strlcpy(dst, src, sizeof(dst));
-
 // 	printf("Copied string: %s\n", dst);
 // 	printf("Number of characters copied: %zu\n", copied_chars);
-
 // 	return (0);
 // }

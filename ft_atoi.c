@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:16:28 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/19 17:17:50 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:15:32 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	ft_atoi(const char *str)
 {
 	int	result;
 	int	sign;
+	int	digit;
 
 	result = 0;
 	sign = 1;
@@ -34,8 +35,6 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		int	digit;
-
 		digit = *str - '0';
 		if (sign == 1 && (result > (INT_MAX - digit) / 10))
 			return (INT_MAX);
@@ -46,5 +45,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-

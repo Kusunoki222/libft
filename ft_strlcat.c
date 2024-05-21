@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:39:50 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/14 15:35:34 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:04:27 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ int	ft_strlen(char *str)
 
 	s = 0;
 	while (str[s] != '\0')
-	{
 		s++;
-	}
 	return (s);
 }
 

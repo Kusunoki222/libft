@@ -6,28 +6,21 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 17:44:23 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/16 17:57:51 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:03:46 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	n;
-
-	n = 0;
 	while (*s)
 	{
-		if (s[n] == c)
-		{
-			return (s[n]);
-			n++;
-			while (*s)
-			{
-				return (s[n]);
-				n++;
-			}
-		}
-		n++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (c == '\0')
+	{
+		return ((char *)s);
 	}
 	return (0);
 }
