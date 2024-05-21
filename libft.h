@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 20:09:22 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 15:16:22 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:17:25 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include	<stdlib.h>
 # include	<string.h>
 # include	<limits.h>
+# include	<stddef.h>
 
 // part1
 int		ft_isalpha(int c);

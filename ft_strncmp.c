@@ -6,31 +6,27 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:48:35 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/18 14:21:48 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:02:35 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
-	unsigned int	ans;
+	size_t	i;
 
 	i = 0;
-	ans = 0;
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		if (s1[i] != s2[i])
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
 		{
-			ans = s1[i] - s2[i];
-			return (ans);
+			return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
 		}
 		i++;
 	}
 	return (0);
 }
-
-// #include	<stdio.h>
-// #include	<string.h>
 
 // int	main(void)
 // {
@@ -39,7 +35,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 // 	char	str3[] = "ABcd";
 // 	char	str4[] = "A!23";
 // 	int	nbr = 3;
-
 // 	printf("Input; %s, %s, %s, %s, %d\n\n", str1, str2, str3, str4, nbr);
 // 	printf("strncmp1(%s, %s), %d\n", str1, str2, strncmp(str1, str2, nbr));
 // 	printf("strncmp2(%s, %s), %d\n", str1, str3, strncmp(str1, str3, nbr));
