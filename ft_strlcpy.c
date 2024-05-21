@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:39:19 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 15:25:15 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 18:27:49 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	size_t	num_copied;
 
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	num_copied = 0;
 	if (size != 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:44:36 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 15:32:16 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 18:23:47 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ char	*ft_strcpy(char	*dest, char	*src)
 	return (dest);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s)
 {
 	char	*adrs;
 
-	adrs = (char *) malloc (sizeof(char) * (ft_strlen(src) + 1));
+	adrs = (char *) malloc (sizeof(char) * (ft_strlen(s) + 1));
 	if (adrs == NULL)
 		return (NULL);
-	ft_strcpy(adrs, src);
+	ft_strcpy(adrs, (char *)s);
 	return (adrs);
 }
 

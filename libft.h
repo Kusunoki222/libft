@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 20:09:22 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 16:17:25 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/21 18:09:18 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 
-// // malloc
-// void	*ft_calloc(size_t n_items, size_t size);
-// char	*ft_strdup(const char *s);
+// malloc
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s);
 
 // // part2
 // char	*ft_substr(char const *str, unsigned int start, size_t len);
