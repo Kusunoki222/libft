@@ -6,21 +6,11 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:39:50 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 16:38:43 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:53:12 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// int	ft_strlen(char *str)
-// {
-// 	int	s;
-
-// 	s = 0;
-// 	while (str[s] != '\0')
-// 		s++;
-// 	return (s);
-// }
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
