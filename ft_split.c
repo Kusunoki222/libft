@@ -6,11 +6,24 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:45:08 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/31 16:49:23 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/02 18:49:47 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	free_result(char **result, size_t count)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+}
 
 static size_t	word_count(const char *s, char c)
 {
@@ -48,18 +61,12 @@ static char	*word_dup(const char *s, size_t start, size_t end)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static int	fill_result(const char *s, char c, char **result)
 {
-	char	**result;
 	size_t	i;
 	size_t	j;
 	size_t	start;
 
-	if (!s)
-		return (NULL);
-	result = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -69,10 +76,31 @@ char	**ft_split(char const *s, char c)
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		if (i > start)
+		if (start < i)
+		{
 			result[j++] = word_dup(s, start, i);
+			if (result[j - 1] == NULL)
+			{
+				free_result(result, j);
+				return (0);
+			}
+		}
 	}
 	result[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	if (!fill_result(s, c, result))
+		return (NULL);
 	return (result);
 }
 
