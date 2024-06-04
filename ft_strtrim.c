@@ -6,13 +6,13 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 14:58:43 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/23 15:43:34 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/04 10:46:35 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+static char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
 

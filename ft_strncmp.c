@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:48:35 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 16:02:35 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/04 10:28:26 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
-		{
 			return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
-		}
 		i++;
 	}
 	return (0);

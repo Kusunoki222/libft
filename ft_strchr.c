@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 17:44:23 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/01 20:18:33 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/04 10:23:29 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,9 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-	// if (!s)
-	// 	return (NULL);
-// char	*ft_strchr(const char *s, int c)
+// int main(void)
 // {
-// 	if (!s)
-// 		return (NULL);
-// 	while (*s)
-// 	{
-// 		if (*s == (unsigned char)c)
-// 			return ((char *)s);
-// 		s++;
-// 	}
-// 	if (c == '\0')
-// 	{
-// 		return ((char *)s);
-// 	}
-// 	return (NULL);
+// 	char *s = "hogehoge";
+// 	char *result = ft_strchr(s, 0);
+// 	printf("%s", result);
 // }
