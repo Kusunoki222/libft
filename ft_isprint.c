@@ -6,13 +6,11 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:18:16 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/04 08:12:00 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:28:34 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int ch)
 {
-	if (ch >= 32 && ch <= 126)
-		return (1);
-	return (0);
+	return (ch >= 32 && ch <= 126);
 }

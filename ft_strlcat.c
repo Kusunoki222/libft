@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 18:39:50 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/04 09:48:18 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:50:30 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	slen;
 	size_t	i;
 
-	dlen = 0;
+	dlen = ft_strlen(dest);
 	slen = ft_strlen(src);
 	i = 0;
-	while (dlen < size && dest[dlen] != '\0')
-		dlen++;
-	if (size == 0 || size <= dlen)
+	if (size <= dlen)
 		return (size + slen);
 	while (src[i] != '\0' && dlen + i < size - 1)
 	{

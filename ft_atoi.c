@@ -6,13 +6,13 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:16:28 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/23 18:47:15 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/05 15:46:29 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	overflow_check(int sign, const char *str)
+static long	proc_atoi(int sign, const char *str)
 {
 	long	temp;
 	long	value;
@@ -44,7 +44,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 	if (*str == '-' || *str == '+')
 		str++;
-	value = overflow_check(sign, str);
+	value = proc_atoi(sign, str);
 	return ((int)(value * sign));
 }
 

@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:45:08 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/02 18:49:47 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:13:43 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,6 @@ static void	free_result(char **result, size_t count)
 		i++;
 	}
 	free(result);
-}
-
-static size_t	word_count(const char *s, char c)
-{
-	size_t	count;
-	int		inword;
-
-	count = 0;
-	inword = 0;
-	while (*s)
-	{
-		if (*s != c && inword == 0)
-		{
-			inword = 1;
-			count++;
-		}
-		else if (*s == c)
-			inword = 0;
-		s++;
-	}
-	return (count);
 }
 
 static char	*word_dup(const char *s, size_t start, size_t end)
@@ -88,6 +67,27 @@ static int	fill_result(const char *s, char c, char **result)
 	}
 	result[j] = NULL;
 	return (1);
+}
+
+static size_t	word_count(const char *s, char c)
+{
+	size_t	count;
+	int		inword;
+
+	count = 0;
+	inword = 0;
+	while (*s)
+	{
+		if (*s != c && inword == 0)
+		{
+			inword = 1;
+			count++;
+		}
+		else if (*s == c)
+			inword = 0;
+		s++;
+	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
