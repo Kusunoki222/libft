@@ -6,13 +6,13 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 19:18:33 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/31 16:49:20 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/06 14:43:47 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long int	ft_iptlen(int n)
+static int	nbr_len(int n)
 {
 	int	len;
 
@@ -27,61 +27,56 @@ static long int	ft_iptlen(int n)
 	return (len);
 }
 
-static char	*ft_tochar(char *s, unsigned int number, long int len)
+static char	*to_char(char *str, unsigned int number, int len)
 {
 	while (number > 0)
 	{
-		s[len--] = '0' + (number % 10);
+		str[len--] = '0' + (number % 10);
 		number = number / 10;
 	}
-	return (s);
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
 	char			*result;
-	long int		iptlen;
+	int				nlen;
 	unsigned int	nbr;
 
-	iptlen = ft_iptlen(n);
-	result = (char *)malloc(sizeof(char) * (iptlen + 1));
+	nlen = nbr_len(n);
+	result = (char *)malloc(sizeof(char) * (nlen + 1));
 	if (!result)
 		return (NULL);
-	result[iptlen] = '\0';
+	result[nlen] = '\0';
 	if (n == 0)
 		result[0] = '0';
-	else if (n < 0)
+	if (n < 0)
 	{
 		result[0] = '-';
 		nbr = -n;
 	}
 	else
 		nbr = n;
-	if (n != 0)
-		result = ft_tochar(result, nbr, iptlen - 1);
+	result = to_char(result, nbr, nlen - 1);
 	return (result);
 }
 
 // int main(void)
 // {
-// 	// テストケース
 // 	int test_values[] = {0, 123, -456, 2147483647, -2147483648};
 // 	size_t num_tests = sizeof(test_values) / sizeof(test_values[0]);
-
-// 	// 各テストケースに対してft_itoaを呼び出し、結果を表示
 // 	for (size_t i = 0; i < num_tests; i++)
 // 	{
 // 		char *result = ft_itoa(test_values[i]);
 // 		if (result)
 // 		{
 // 			printf("ft_itoa(%d) = %s\n", test_values[i], result);
-// 			free(result); // メモリリークを防ぐために解放
+// 			free(result);
 // 		}
 // 		else
 // 		{
 // 			printf("ft_itoa(%d) failed to allocate memory\n", test_values[i]);
 // 		}
 // 	}
-
 // 	return 0;
 // }

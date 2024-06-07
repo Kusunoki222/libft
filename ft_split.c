@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 15:45:08 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/05 19:13:43 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/06 14:24:38 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	fill_result(const char *s, char c, char **result)
 		while (s[i] == c)
 			i++;
 		start = i;
-		while (s[i] && s[i] != c)
+		while (s[i] != c && s[i])
 			i++;
 		if (start < i)
 		{
