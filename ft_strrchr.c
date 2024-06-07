@@ -6,7 +6,7 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:33:04 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/05 15:16:23 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/07 13:22:28 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	count;
+	int	count;
 
 	count = ft_strlen(s);
 	while (count >= 0)
 	{
-		if (s[count] == (char)c)
+		if (s[count] == (unsigned char)c)
 			return ((char *)(s + count));
 		count--;
 	}
