@@ -6,15 +6,13 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 11:58:07 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/05/21 15:09:32 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:41:54 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int inp)
 {
-	if ((inp >= 'A' && inp <= 'Z') || (inp >= 'a' && inp <= 'z'))
-		return (1);
-	if ((inp >= '0' && inp <= '9'))
-		return (1);
-	return (0);
+	return (ft_isalpha(inp) || ft_isdigit(inp));
 }

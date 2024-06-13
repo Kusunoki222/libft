@@ -6,13 +6,11 @@
 /*   By: kkusunok <kkusunok@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:40:05 by kkusunok          #+#    #+#             */
-/*   Updated: 2024/06/04 08:09:34 by kkusunok         ###   ########.fr       */
+/*   Updated: 2024/06/09 17:29:38 by kkusunok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int ch)
 {
-	if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
-		return (1);
-	return (0);
+	return ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'));
 }
