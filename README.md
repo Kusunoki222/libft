@@ -1,4 +1,0 @@
-# libft
-
-## option + command + H
-
